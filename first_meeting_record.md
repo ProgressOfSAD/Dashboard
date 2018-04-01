@@ -14,5 +14,15 @@
   - by陈耀明
     ![](https://raw.githubusercontent.com/ProgressOfSAD/Dashboard/master/asset/ByYoung_first.png)
 
+  - by吴昌贵
+    ![](https://raw.githubusercontent.com/ProgressOfSAD/Dashboard/master/asset/ByWCG_first.png)
+
+  - by谢佳鑫
+
+    ![](https://raw.githubusercontent.com/ProgressOfSAD/Dashboard/master/asset/ByXJX_first.png)
+
+  - by谢颜行
+    ![](https://raw.githubusercontent.com/ProgressOfSAD/Dashboard/master/asset/ByXYX_first.png)
+
   ​
 

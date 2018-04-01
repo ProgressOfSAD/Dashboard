@@ -21,7 +21,7 @@ Record of Library_Service_System_for_Readers development progress
 
 ## Iterations
 
-####Iteration 1
+###Iteration 1
 
 ##### week1(2018.3.25)
 

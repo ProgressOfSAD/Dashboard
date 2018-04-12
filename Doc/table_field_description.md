@@ -1,6 +1,6 @@
 # 数据库字段说明文档
 
-数据库中一共有7个表，该文档对这7个表的不同字段进行说明。字段的类型都是Django model里定义的类型
+数据库中一共有10个表，该文档对这7个表的不同字段进行说明。字段的类型都是Django model里定义的类型
 
 ## UserInfo
 该表用于存储用户注册时候以及之后认证的信息
@@ -23,14 +23,11 @@
 
 序号|字段|类型|描述|其他
 -|-|-|-|-
-1|user_id|IntergerField|用户id，与UserInfo.user_id相同|
+1|user_id|OneToOneField|用户id，与UserInfo.user_id相同|
 2|collection|TextField|用户收藏的书籍列表|存储书籍的id,不同id之间用","隔开
-3|reservation|TextField|用户预订的书籍列表|同上
-4|borrowed|TextField|用户所借的书籍列表|同上
-5|returned|TextField|用户已经归还的书籍列表|同上
-6|borrow_credit|IntegerField|记录用户借书的信用信息，用户不按期归还书籍，损坏书籍会导致信用降低|信用等级从0到5，等级过低时无法借到书籍，默认为5
-7|comment_credit|IntegerField|记录用户对书籍做出评价的可靠性，用户的评价被越多人举报，可靠性越低|等级从0到5，等级过低时无法评价书籍，默认为5
-8|report_credit|IntegerField|记录用户举报评论的有用性，随意举报评论会导致有用性降低|等级从0到5，等级过低时无法举报评论，默认为5
+3|borrow_credit|IntegerField|记录用户借书的信用信息，用户不按期归还书籍，损坏书籍会导致信用降低|信用等级从0到5，等级过低时无法借到书籍，默认为5
+4|comment_credit|IntegerField|记录用户对书籍做出评价的可靠性，用户的评价被越多人举报，可靠性越低|等级从0到5，等级过低时无法评价书籍，默认为5
+5|report_credit|IntegerField|记录用户举报评论的有用性，随意举报评论会导致有用性降低|等级从0到5，等级过低时无法举报评论，默认为5
 
 ## ManagerInfo
 该表用于记录管理员的信息，只能通过超级管理员手动添加
@@ -64,7 +61,7 @@
 
 序号|字段|类型|描述|其他
 -|-|-|-|-
-1|book_id|IntegerField|书籍id，与BookInfo.book_id相同|
+1|book_id|OneToOneField|书籍id，与BookInfo.book_id相同|
 2|score1|IntegerField|对该书籍评分为1的人数|默认为0，书用户对籍的评分从1到5
 3|score2|IntegerField|对该书籍评分为2的人数|默认为0
 4|score3|IntegerField|对该书籍评分为3的人数|默认为0
@@ -72,7 +69,6 @@
 6|score5|IntegerField|对该书籍评分为5的人数|默认为0
 7|browsing_times|IntegerField|浏览次数|默认为0
 8|state|IntegerField|书籍的状态|其中0为正常，1为被预定，2为被借出
-9|stock|IntegerField|书籍的库存|默认为1
 
 ## TypeList
 该表用于表示不同类型的id编号以及该类型的详细名称
@@ -88,10 +84,39 @@
 序号|字段|类型|描述|其他
 -|-|-|-|-
 1|models_id|CharField|该条评论的唯一标识|长度为64
-2|user_id|IntegerField|该条评论的评论人员的id|
-3|book_id|IntegerField|该评论所评论的书籍的id|
+2|user_id|ForeignKey|该条评论的评论人员的id|
+3|book_id|ForeignKey|该评论所评论的书籍的id|
 4|reported_times|IntegerField|评论被举报的次数|被举报次数过多会被删除
 5|comment_time|CharField|评论的时间|
 6|contend|TextField|评论的内容|
 7|agree|IntegerField|赞同该评论的人数|默认为0
-8|disagree|IntegerField|不赞同该评论的人数|m默认为0
+8|disagree|IntegerField|不赞同该评论的人数|默认为0
+
+## User_Book
+该表用于记录用户预订书籍，借书和还书的一些信息
+
+序号|字段|类型|描述|其他
+-|-|-|-|-
+1|user_id|ForeignKey|本条记录对应的用户id|
+2|book_id|ForeignKey|本条记录对应的书籍的id|
+3|time|CHarField|该条记录提出/操作的时间|预订、借书、还书的时间
+4|state|IntegerField|相关操作|例如没有操作(0),预订(1),借(2),归还(3)
+
+## ScoreToBook
+该表用户记录不同用户对不同书籍的评分
+
+序号|字段|类型|描述|其他
+-|-|-|-|-
+1|user_id|ForeignKey|评分者|
+2|book_id|ForeignKey|评分的书籍|与user_id一起作为联合主键
+3|score|IntegerField|评分|
+
+## AgreeDisagree
+该表用于记录不同用户对不同评论的agree或者disagree情况，包括举报
+
+序号|字段|类型|描述|其他
+-|-|-|-|-
+1|comment_id|ForeignKey|评论的id|
+2|user_id|ForeignKey|对该评论操作的用户
+3|agree_disagree|NullBooleanField|赞同或者不赞同|可以为空
+4|reported|CharField|对该评论进行举报时的理由|为空字符串表示没有举报

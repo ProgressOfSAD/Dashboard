@@ -66,4 +66,4 @@
 - 提交 归还确认：提交借阅记录的归还确认。返回是否归还成功。
 
 
-  [1]: assest/manage_design.png
+  [1]: asset/manage_design.png

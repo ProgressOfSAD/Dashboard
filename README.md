@@ -15,7 +15,7 @@ Record of Library_Service_System_for_Readers development progress
 
 ## Document
 
-- [需求分析](https://github.com/ProgressOfSAD/Dashboard/blob/master/Doc/%E8%BD%AF%E4%BB%B6%E8%A7%84%E6%A0%BC%E9%9C%80%E6%B1%82%E8%AF%B4%E6%98%8E%E4%B9%A6.md)
+- [需求分析](./software_requirements_specification.md)
 - [风险分析](https://github.com/ProgressOfSAD/Dashboard/blob/master/risk_analysis.md)
 
 

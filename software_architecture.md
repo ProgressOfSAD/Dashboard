@@ -56,8 +56,10 @@ urlpatterns = [
 负责处理从读者服务平台发送过来的请求
 
 #### 2.2.3.2. 功能
-1、注册<br />
-API：user_app/registry/<br />
+1、注册
+```
+API：user_app/registry/
+```
 请求（POST）
 ```Python
 {
@@ -77,8 +79,10 @@ API：user_app/registry/<br />
 说明：数据格式的合法性由前端来确保。因为将格式检查放在用户的浏览器上进行可以减轻服务器的负担。
 </blockquote>
 
-2、登陆<br />
-API：user_app/login/<br />
+2、登陆
+```
+API：user_app/login/
+```
 请求（POST）
 ```Python
 {
@@ -93,8 +97,10 @@ API：user_app/login/<br />
     'error_msg': '', # notes of failure
 }
 ```
-3、登出<br />
-API：user_app/logout/<br />
+3、登出
+```
+API：user_app/logout/
+```
 请求（POST）
 ```Python
 {}
@@ -106,8 +112,10 @@ API：user_app/logout/<br />
     'error_msg': '', # notes of failure
 }
 ```
-4、获取某个书籍分类下的条目信息（用户可以处于未登陆状态）<br />
-API：user_app/category/(?P<cid>\d+)_(?P<begin>\d+)-(?P<end>\d+)/<br />
+4、获取某个书籍分类下的条目信息（用户可以处于未登陆状态）
+```
+API：user_app/category/(?P<cid>\d+)_(?P<begin>\d+)-(?P<end>\d+)/
+```
 <blockquote>
 说明：如果访问user_app/category/3_5-10/，则后端返回数据库分类表中id为3的分类下的编号为5、6、7、8、9的条目。每个条目表示一本书籍，展示的信息包含书的封面、书名、作者、简介和评分。先将条目按书籍的评分高低进行排序再选取。这样做的好处是，前端页面的分页效果可以自由地决定。举例来说，如果是每页8个条目，前端想获取id为3的分类下的第2页的内容，就访问user_app/category/3_9-17/。
 </blockquote>
@@ -125,8 +133,10 @@ API：user_app/category/(?P<cid>\d+)_(?P<begin>\d+)-(?P<end>\d+)/<br />
 说明：msg的值是一个字符串化的字典。字典中的key是书的id，value也是一个字典，用来表示一个书的条目。value字典的key-value对参考数据库中的书表。
 </blockquote>
 
-5、获取某本书的详细信息（用户可以处于未登陆状态）<br />
-API：user_app/detail/(?P<bid>\d+)/<br />
+5、获取某本书的详细信息（用户可以处于未登陆状态）
+```
+API：user_app/detail/(?P<bid>\d+)/
+```
 <blockquote>
 说明：bid指代书的id。/user_app/detail/3返回的就是id为3的书的详细信息。
 </blockquote>
@@ -144,8 +154,10 @@ API：user_app/detail/(?P<bid>\d+)/<br />
 说明：msg的值是一个字符串化的字典。其中的key-value对参考数据库中的书表。
 </blockquote>
 
-6、收藏<br />
-API：user_app/collect_book/<br />
+6、收藏
+```
+API：user_app/collect_book/
+```
 请求（POST）
 ```Python
 {
@@ -159,8 +171,10 @@ API：user_app/collect_book/<br />
     'error_msg': '', # notes of failure
 }
 ```
-7、订阅<br />
-API：user_app/subscribe_book/<br />
+7、订阅
+```
+API：user_app/subscribe_book/
+```
 请求（POST）
 ```Python
 {
@@ -174,8 +188,10 @@ API：user_app/subscribe_book/<br />
     'error_msg': '', # notes of failure
 }
 ```
-8、评分<br />
-API：user_app/star_book/<br />
+8、评分
+```
+API：user_app/star_book/
+```
 请求（POST）
 ```Python
 {
@@ -189,8 +205,10 @@ API：user_app/star_book/<br />
     'error_msg': '', # notes of failure
 }
 ```
-9、评论区<br />
-API：user_app/comment_section/(?P<bid>\d+)/<br />
+9、评论区
+```
+API：user_app/comment_section/(?P<bid>\d+)/
+```
 <blockquote>
 说明：bid指代书的id。/user_app/comment_section/3返回的就是id为3的书对应的评论区信息。
 </blockquote>
@@ -227,8 +245,10 @@ API：user_app/comment_section/(?P<bid>\d+)/<br />
 说明：protocol取值为'0'时表示发表评论，取值为'1'时代表点赞，取值为'2'时代表踩，取值为'3'时代表举报。msg是评论的内容（只有在protocol的值为'0'时有内容）。parent代表回复、点赞、踩和举报的目标评论id，当评论不是回复别人时，parent取值'0'（数据库表中的id从1开始）。
 </blockquote>
 
-10、用户信息<br />
-API：user_app/user_profile/(?P<uid>\d+)/<br />
+10、用户信息
+```
+API：user_app/user_profile/(?P<uid>\d+)/
+```
 <blockquote>
 说明：uid指代用户的id。/user_app/user_profile/3返回的就是id为3的用户的详细信息。
 </blockquote>
@@ -259,8 +279,10 @@ API：user_app/user_profile/(?P<uid>\d+)/<br />
 说明：msg的值是一个字符串化的字典。其中的key-value对参考数据库表中的用户表。
 </blockquote>
 
-11、检索（用户可以处于未登陆状态）<br />
-API：user_app/retrieve/<br />
+11、检索（用户可以处于未登陆状态）
+```
+API：user_app/retrieve/
+```
 请求（GET，user_app/retrieve/?key=xxx）<br />
 响应
 ```Python
@@ -279,8 +301,10 @@ API：user_app/retrieve/<br />
 负责处理从管理员平台发送过来的请求
 
 #### 2.2.3.2. 功能
-1、登陆<br />
-API：user_app/login/<br />
+1、登陆
+```
+API：user_app/login/
+```
 请求（POST）
 ```Python
 {
@@ -295,8 +319,10 @@ API：user_app/login/<br />
     'error_msg': '', # notes of failure
 }
 ```
-2、登出<br />
-API：user_app/logout/<br />
+2、登出
+```
+API：user_app/logout/
+```
 请求（POST）
 ```Python
 {}
@@ -308,8 +334,10 @@ API：user_app/logout/<br />
     'error_msg': '', # notes of failure
 }
 ```
-3、获取管理员自己的信息<br />
-API：manager_app/manager_info/<br />
+3、获取管理员自己的信息
+```
+API：manager_app/manager_info/
+```
 请求（GET）<br />
 响应
 ```Python
@@ -319,8 +347,10 @@ API：manager_app/manager_info/<br />
     'error_msg': '', # notes of failure
 }
 ```
-4、举报信息盒<br />
-API：manager_app/report_info_box/<br />
+4、举报信息盒
+```
+API：manager_app/report_info_box/
+```
 请求（GET）<br />
 响应
 ```Python
@@ -352,8 +382,10 @@ API：manager_app/report_info_box/<br />
 说明：protocol取值为'0'时表示删除评论，取值为'1'时表示删除举报信息。举报信息也用评论的id来索引。
 </blockquote>
 
-5、库存管理<br />
-API：manager_app/inventory_management/<br />
+5、库存管理
+```
+API：manager_app/inventory_management/
+```
 请求（GET，manager_app/inventory/?key=xxx）<br />
 响应
 ```Python
@@ -387,7 +419,9 @@ API：manager_app/inventory_management/<br />
 
 
 6、借记
-API：manager_app/debit/<br />
+```
+API：manager_app/debit/
+```
 请求（GET，manager_app/debit/?username=xxx）<br />
 响应
 ```Python
@@ -417,8 +451,10 @@ API：manager_app/debit/<br />
 说明：msg是一个字符串化的字典。具体内容参考数据库中借书登记表。
 </blockquote>
 
-7、归还<br />
-API：manager_app/return/<br />
+7、归还
+```
+API：manager_app/return/
+```
 请求（GET，manager_app/return/?username=xxx）<br />
 响应
 ```Python

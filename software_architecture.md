@@ -130,7 +130,7 @@ API：user_app/category/(?P<cid>\d+)_(?P<begin>\d+)-(?P<end>\d+)/
 }
 ```
 <blockquote>
-说明：msg的值是一个字符串化的字典。字典中的key是书的id，value也是一个字典，用来表示一个书的条目。value字典的key-value对参考数据库中的书表。
+说明：msg的值是一个经过JSON序列化后的字典。字典中的key是书的id，value也是一个字典，用来表示一个书的条目。value字典的key-value对参考数据库中的书表。
 </blockquote>
 
 5、获取某本书的详细信息（用户可以处于未登陆状态）
@@ -151,7 +151,7 @@ API：user_app/detail/(?P<bid>\d+)/
 }
 ```
 <blockquote>
-说明：msg的值是一个字符串化的字典。其中的key-value对参考数据库中的书表。
+说明：msg的值是一个经过JSON序列化后的字典。其中的key-value对参考数据库中的书表。
 </blockquote>
 
 6、收藏
@@ -224,7 +224,7 @@ API：user_app/comment_section/(?P<bid>\d+)/
 }
 ```
 <blockquote>
-说明：msg的值是一个字符串化的（多层嵌套的）字典。形成一个森林结构。
+说明：msg的值是一个经过JSON序列化后的（多层嵌套的）字典。形成一个森林结构。
 </blockquote>
 
 请求（POST）
@@ -277,7 +277,7 @@ API：user_app/user_profile/(?P<uid>\d+)/
 }
 ```
 <blockquote>
-说明：msg的值是一个字符串化的字典。其中的key-value对参考数据库表中的用户表。
+说明：msg的值是一个经过JSON序列化后的字典。其中的key-value对参考数据库表中的用户表。
 </blockquote>
 
 11、检索（用户可以处于未登陆状态）
@@ -294,7 +294,7 @@ API：user_app/retrieve/
 }
 ```
 <blockquote>
-说明：msg的值是一个字符串化的字典。字典中的key是书的id，value也是一个字典，用来表示一个书的条目。value字典的key-value对参考数据库中的书表。
+说明：msg的值是一个经过JSON序列化后的字典。字典中的key是书的id，value也是一个字典，用来表示一个书的条目。value字典的key-value对参考数据库中的书表。
 </blockquote>
 
 #### 2.2.4. APP：manager_app
@@ -362,7 +362,7 @@ API：manager_app/report_info_box/
 }
 ```
 <blockquote>
-说明：msg的值是一个字符串化的字典。字典中的key是被举报的评论的id，value是举报的理由。
+说明：msg的值是一个经过JSON序列化后的字典。字典中的key是被举报的评论的id，value是举报的理由。
 </blockquote>
 
 请求（POST）
@@ -397,7 +397,7 @@ API：manager_app/inventory_management/
 }
 ```
 <blockquote>
-说明：msg的值是一个字符串化的字典。字典中的key是书的id，value也是一个字典，用来表示一个书的条目。value字典的key-value对参考数据库中的书表。
+说明：msg的值是一个经过JSON序列化后的字典。字典中的key是书的id，value也是一个字典，用来表示一个书的条目。value字典的key-value对参考数据库中的书表。
 </blockquote>
 
 请求（POST）
@@ -449,7 +449,7 @@ API：manager_app/debit/
 }
 ```
 <blockquote>
-说明：msg是一个字符串化的字典。具体内容参考数据库中借书登记表。
+说明：msg是一个经过JSON序列化后的字典。具体内容参考数据库中借书登记表。
 </blockquote>
 
 7、归还

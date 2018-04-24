@@ -196,6 +196,7 @@ API：user_app/star_book/
 ```Python
 {
     'bid': '', # book's id
+    'star': '', # range: [1, 5]
 }
 ```
 响应

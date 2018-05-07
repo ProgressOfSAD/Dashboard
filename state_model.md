@@ -7,5 +7,6 @@
   ![](https://raw.githubusercontent.com/ProgressOfSAD/Dashboard/master/asset/state_model_subscribe.png)
 
 - 评分书籍
+
   ![](https://raw.githubusercontent.com/ProgressOfSAD/Dashboard/master/asset/state_model_score.png)
-  ​
+  

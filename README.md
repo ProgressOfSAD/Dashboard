@@ -19,7 +19,7 @@ Record of Library_Service_System_for_Readers development progress
 - [风险分析](https://github.com/ProgressOfSAD/Dashboard/blob/master/risk_analysis.md)
 
 
-- API列表
+- [API列表](https://github.com/ProgressOfSAD/Dashboard/blob/master/software_architecture.md)
 
 - [用例分析](https://github.com/ProgressOfSAD/Dashboard/blob/master/use_case.md)
 

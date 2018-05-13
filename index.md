@@ -32,4 +32,4 @@ layout: default
     - inception meeting (yy/mm/dd)
 * X2 Tech/Work Report
     - 学号-title
-* X3 ![建模练习](./Asg_OB.md)
+* X3 [建模练习](./Asg_OB.md)

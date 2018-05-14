@@ -33,3 +33,6 @@ layout: default
 * X2 Tech/Work Report
     - 学号-title
 * X3 [建模练习](./Asg_OB.md)
+    - 中山大学线上图书馆系统
+    - [建模要求](./Asg_OB.md)
+    - [建模者答案与评价](./urls.md)

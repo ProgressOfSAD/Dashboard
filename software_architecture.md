@@ -422,7 +422,7 @@ API：user_app/retrieve/
 #### 2.2.3.2. 功能
 1、登陆
 ```
-API：user_app/login/
+API：manager_app/login/
 ```
 请求（POST）
 ```Python
@@ -546,18 +546,25 @@ API：manager_app/debit/
 ```Python
 {
     'status': '', # 'success' or 'failure'
-    'msg': '',
+    'msg': '{
+        '1': '{'username': '', 'book': '', 'active_time': ''}',
+        '2': '{ ... }',
+        ...
+    }',
     'error_msg': '', # notes of failure
 }
 ```
 <blockquote>
-说明：msg包含用户xxx所有的预约请求。
+说明：msg包含用户xxx所有的预约请求。'username'就是用户名，'book'是书名，'active_time'是预约的时间。
 </blockquote>
 
 请求（POST）
 ```Python
 {
-    'msg': '',
+    'msg': '{
+        'username': '',
+        'bid': '',    # book id
+    }',
 }
 ```
 ```Python
@@ -567,7 +574,7 @@ API：manager_app/debit/
 }
 ```
 <blockquote>
-说明：msg是一个经过JSON序列化后的字典。具体内容参考数据库中借书登记表。
+说明：msg是一个经过JSON序列化后的字典。
 </blockquote>
 
 7、归还
@@ -579,12 +586,16 @@ API：manager_app/return/
 ```Python
 {
     'status': '', # 'success' or 'failure'
-    'msg': '',
+    'msg': '{
+        '1': '{'username': '', 'book': '', 'active_time': ''}',
+        '2': '{ ... }',
+        ...
+    }',
     'error_msg': '', # notes of failure
 }
 ```
 <blockquote>
-说明：msg包含用户xxx所有的借阅记录。
+说明：msg包含用户xxx所有的借阅记录。'username'就是用户名，'book'是书名，'active_time'是借出的时间。
 </blockquote>
 
 请求（POST）

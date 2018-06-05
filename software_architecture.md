@@ -475,13 +475,43 @@ API：manager_app/report_info_box/
 ```Python
 {
     'status': '', # 'success' or 'failure'
-    'msg': '',
+    'msg': '{
+        '1': '{
+            'content': '',
+            'report_reasons': '{
+                '0': '',
+                '1': '',
+                '2': '',
+                '3': '',
+                '4': '',
+                '5': '',
+                '6': '',
+                '7': '',
+                '8': '',
+            }',
+        }',
+        '2': ...
+    }',
     'error_msg': '', # notes of failure
 }
 ```
 <blockquote>
-说明：msg的值是一个经过JSON序列化后的字典。字典中的key是被举报的评论的id，value是举报的理由。
+说明：msg的值是一个经过JSON序列化后的字典。字典中的key是被举报的评论的id。字典的value是一个字典，其中'content'对应的value是评论的内容，而'report_reasion'的value又是一个字典。其对应关系如下。这些key对应的value是以该理由举报这条评论的举报人数（用字符串表示数字）。
 </blockquote>
+
+```Python
+report_reason_choices = (
+        (0, u'广告或垃圾信息'),
+        (1, u'低俗或色情'),
+        (2, u'违反相关法律法规或管理规定'),
+        (3, u'辱骂或不友善'),
+        (4, u'引战或过于偏激的主观判断'),
+        (5, u'泄露他人隐私'),
+        (6, u'与作品或讨论区主题无关'),
+        (7, u'刷屏'),
+        (8, u'其它原因'),
+    )
+```
 
 请求（POST）
 ```Python

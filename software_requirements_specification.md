@@ -11,7 +11,7 @@
 <br/>
 <br/>
 <p align="center">小组成员</p>
-<p align="center">陈耀明、吴昌贵、谢佳鑫、谢颜行</p>
+<p align="center">CYM, XYX, XJX, WCG</p>
 <br/>
 <br/>
 <br/>
@@ -26,7 +26,7 @@
 关键字|需求文档、图书管理系统、最初版本
 参考资料|《UML和模式应用》Craig Larman著 李洋 郑龚 等译 https://blog.csdn.net/remoa_dengqinyi/article/details/52760507
 创建时间|2018.3.30
-创建人|谢佳鑫
+创建人|XJX
 最新发布日期|2018.4.11
 
 **文档变更记录**

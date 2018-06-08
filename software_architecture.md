@@ -13,4 +13,4 @@
 
 
 ## 物理视图
-
+![](./asset/deploy_view.PNG)

@@ -25,7 +25,8 @@ layout: default
         - 7.2.1 用户及权限系统数据库设计
         - 7.2.2 XX子系统数据课设计 
         - 7.2.x 第三方数据评审结果
-    - 7.3 API 设计
+    - 7.3 [API 设计](./API_list.md)
+    - 7.4 [Software Architecture Document](./software_architecture.md)
 * 8、生产规范与指南
     - 8.1 XX 代码规范
     - 8.2 REST API 设计规范

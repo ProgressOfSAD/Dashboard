@@ -9,7 +9,7 @@
 
 
 ## 逻辑视图
-
+![](./asset/logic_view.png)
 
 
 ## 物理视图

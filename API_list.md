@@ -552,6 +552,10 @@ API：manager_app/inventory_management/
             'press': '',
             'contents': '',
             'inventory': '',
+            'types': '{
+                '1': '',
+                '2': ...
+            }'
         }',
         '2': ...
     }',
@@ -570,13 +574,16 @@ API：manager_app/inventory_management/
         'cover': '',
         'name': '',
         'author': '',
-        'score': '',
         'brief': '',
         'ISBN': '',
         'publish_time': '',
         'press': '',
         'contents': '',
         'inventory': '',
+        'types': '{
+            '1': '',
+            '2': ...
+        }'
     }',
 }
 ```

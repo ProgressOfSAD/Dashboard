@@ -540,7 +540,21 @@ API：manager_app/inventory_management/
 ```Python
 {
     'status': '', # 'success' or 'failure'
-    'msg': '', # infomation of the retrieve
+    'msg': '{
+        '1': '{
+            'cover': '',
+            'name': '',
+            'author': '',
+            'score': '',
+            'brief': '',
+            'ISBN': '',
+            'publish_time': '',
+            'press': '',
+            'contents': '',
+            'inventory': '',
+        }',
+        '2': ...
+    }',
     'error_msg': '', # notes of failure
 }
 ```

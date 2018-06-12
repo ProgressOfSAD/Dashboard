@@ -570,7 +570,6 @@ API：manager_app/inventory_management/
         'cover': '',
         'name': '',
         'author': '',
-        'score': '',
         'brief': '',
         'ISBN': '',
         'publish_time': '',

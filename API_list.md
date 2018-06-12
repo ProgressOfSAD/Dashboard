@@ -566,7 +566,18 @@ API：manager_app/inventory_management/
 ```Python
 {
     'protocol': '',
-    'msg': '',
+    'msg': '{
+        'cover': '',
+        'name': '',
+        'author': '',
+        'score': '',
+        'brief': '',
+        'ISBN': '',
+        'publish_time': '',
+        'press': '',
+        'contents': '',
+        'inventory': '',
+    }',
 }
 ```
 响应

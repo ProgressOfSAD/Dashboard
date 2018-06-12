@@ -552,6 +552,10 @@ API：manager_app/inventory_management/
             'press': '',
             'contents': '',
             'inventory': '',
+            'types': '{
+                '1': '',
+                '2': ...
+            }'
         }',
         '2': ...
     }',
@@ -576,6 +580,10 @@ API：manager_app/inventory_management/
         'press': '',
         'contents': '',
         'inventory': '',
+        'types': '{
+            '1': '',
+            '2': ...
+        }'
     }',
 }
 ```

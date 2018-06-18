@@ -570,7 +570,7 @@ API：manager_app/type_management/
 说明：'protocol'取值为'0'时表示增加，'1'时表示删除，'2'时表示修改。增加时，'old'的值为空字符串，'new'的值为要增加的类型名。删除时，'old'的值为要删除的类型名，'new'的值为空字符串。修改时，'old'的值为旧的类型名，'new'的值为新的类型名。
 </blockquote>
 
-5、库存管理
+6、库存管理
 ```
 API：manager_app/inventory_management/
 ```
@@ -638,7 +638,7 @@ API：manager_app/inventory_management/
 </blockquote>
 
 
-6、借记
+7、借记
 ```
 API：manager_app/debit/
 ```
@@ -678,7 +678,7 @@ API：manager_app/debit/
 说明：msg是一个经过JSON序列化后的字典。
 </blockquote>
 
-7、归还
+8、归还
 ```
 API：manager_app/return/
 ```

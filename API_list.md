@@ -531,6 +531,45 @@ report_reason_choices = (
 说明：protocol取值为'0'时表示删除评论，取值为'1'时表示删除举报信息。举报信息也用评论的id来索引。
 </blockquote>
 
+5、类型管理
+```
+API：manager_app/type_management/
+```
+请求（GET，manager_app/inventory/）<br />
+响应
+```Python
+{
+    'status': '', # 'success' or 'failure'
+    'msg': '{
+        '1': '',
+        '2': '',
+    }'
+    'error_msg': '', # notes of failure
+}
+```
+<blockquote>
+说明：返回所有的类型信息。msg的key是类型的id，value是对应的类型。
+</blockquote>
+
+请求（POST）
+```Python
+{
+    'protocol': '',
+    'old': '',
+    'new': '',
+}
+```
+响应
+```Python
+{
+    'status': '', # 'success' or 'failure'
+    'error_msg': '', # notes of failure
+}
+```
+<blockquote>
+说明：'protocol'取值为'0'时表示增加，'1'时表示删除，'2'时表示修改。增加时，'old'的值为空字符串，'new'的值为要增加的类型名。删除时，'old'的值为要删除的类型名，'new'的值为空字符串。修改时，'old'的值为旧的类型名，'new'的值为新的类型名。
+</blockquote>
+
 5、库存管理
 ```
 API：manager_app/inventory_management/

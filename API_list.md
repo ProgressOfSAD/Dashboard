@@ -535,7 +535,7 @@ report_reason_choices = (
 ```
 API：manager_app/type_management/
 ```
-请求（GET，manager_app/inventory/）<br />
+请求（GET，manager_app/type_management/）<br />
 响应
 ```Python
 {

@@ -212,6 +212,7 @@ API：user_app/login/
 ```Python
 {
     'status': '', # 'success' or 'failure'
+    'msg': '', # user message, contains 'uid', 'username, 'avatar'
     'error_msg': '', # notes of failure
 }
 ```

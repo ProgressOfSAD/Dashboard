@@ -281,6 +281,7 @@ API：user_app/collect_book/
 ```Python
 {
     'bid': '', # book's id
+    'protocol' : '', # 0 : collection, 1 : cancel collection
 }
 ```
 响应

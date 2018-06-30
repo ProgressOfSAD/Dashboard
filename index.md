@@ -35,6 +35,15 @@ layout: default
 * X2 Tech/Work Report
     - 学号-title
 * X3 [建模练习](./Asg_OB.md)
-    - 中山大学线上图书馆系统
     - [建模要求](./Asg_OB.md)
     - [建模者答案与评价](./urls.md)
+* X4 Final Report
+    - 课程学习自我总结
+      [15331040](./review_15331040.md)
+      [15331326]()
+      [15331325]()
+      [15331310]()
+    - [PSP 2.1统计表](./psp2.1.md)
+    - [个人git分支统计报告（截图）](./personal_report.md)
+    - [自认为最得意/或有价值/或有苦劳的工作清单，含简短说明（一句话）](./work_list.md)
+    - [个人的技术类、项目管理类博客清单（只需要名称与 url )](./personal_blog.md)

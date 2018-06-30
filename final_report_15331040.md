@@ -33,11 +33,10 @@ PM的工作暂且不提，主要说前端开发。第一次完全自己写一个
 ## 个人分支的 GIT 统计报告（截图）
 
 - Dashboard记录：
-  ![](./asset/cym_dashboard.png)
-
+  ![](./asset/cym_dashboard.PNG)
 - Frontend记录：
 
-  ![](./asset/cym_commit.png)
+  ![](./asset/cym_commit.PNG)
 
   ​
 

@@ -39,6 +39,6 @@ layout: default
     - [建模者答案与评价](./urls.md)
 * X4 Final Report
     - [15331040](./final_report_15331040.md)
-    - [15331326](./final_report_15331326.md)
-    - [15331325](./final_report_15331325.md)
-    - [15331311](./final_report_15331311.md)
+    - [15331326](./final_report_15331326)
+    - [15331325](./final_report_15331325)
+    - [15331311](./final_report_15331311)

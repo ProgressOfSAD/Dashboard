@@ -26,9 +26,11 @@
 ### 个人分支的 GIT 统计报告（不需要解释原因）- 仅需要提交截图
 ### Dashboard
 ![](./asset/dashboard_git_15331311.png)
+![](./asset/dashboard_git_all.png)
 
 ### Backend
 ![](./asset/backend_git_15331311.png)
+![](./asset/backend_git_all.png)
 
 ### 自认为最得意/或有价值/或有苦劳的工作清单，含简短说明（一句话）
 设计前后端的交互方式

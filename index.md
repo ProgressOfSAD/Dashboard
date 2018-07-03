@@ -8,9 +8,9 @@ layout: default
 
 * 1、[About](./about)（项目规划）
 * 2、[Team profile](./team-profile.md)（团队组建）
-* 3、Investigation（项目前期调研）
-* 4、Vision（项目愿景）
-* 5、Product Backlog （产品特性）
+* 3、[Investigation（项目前期调研）](./sup_require.md)
+* 4、[Vision（项目愿景）](./vision.md)
+* 5、[Product Backlog （产品特性）](./backlog.md)
 * 6、Requirement specification（需求规格说明）
     - 6.1 [Usecase Diagram](./asset/Use_case.png)（用例图）
     - 6.2 [Use Cases](./use_case.md)（用例+活动图）
@@ -19,8 +19,7 @@ layout: default
     - 6.5 [System Sequence Diagram](./system_seq_design)（功能模型）
     - 6.6 [Supplementary Requirements](./sup_require)（补充需求）
 * 7、Design（设计）
-    - 7.1 UI design
-        - XX 用例 UI设计
+    - 7.1 [UI design](./demo.md)
     - 7.2 [Database design](./database_design)
         - 7.2.1 用户及权限系统数据库设计
         - 7.2.2 XX子系统数据课设计 

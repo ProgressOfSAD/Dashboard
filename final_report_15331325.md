@@ -23,9 +23,9 @@
 | Postmortem & Process Improvement Plan | 事后总结, 并提出过程改进计划 | 3 |
 
 ## 个人分支的 GIT 统计报告（截图）
-Dashboard仓库
+Dashboard仓库  
 ![](./asset/Dashboard_15331325.png)  
-Backend仓库
+Backend仓库  
 ![](./asset/Backend_15331325.png)
 
 ## 自认为最得意/或有价值/或有苦劳的工作清单

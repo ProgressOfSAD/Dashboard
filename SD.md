@@ -88,7 +88,7 @@ ViewModel将View和Model连接起来，View的变动将自动反映到Model上�
 <br />
 common文件夹下为每个页面所共享的组件，page文件夹下为借阅，书籍管理，归还等多个功能的组件，通过router在router-view上进行切换。
 <br />
-其中common文件夹下的代码文件及main.js, App.vue为使用他人的代码（https://github.com/lin-xin/vue-manage-system）
+其中common文件夹下的代码文件及main.js, App.vue为使用他人的代码( https://github.com/lin-xin/vue-manage-system )
 <br />
 ![](./asset/adminmokuai.png)
 <br />

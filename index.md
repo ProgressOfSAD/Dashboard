@@ -18,6 +18,7 @@ layout: default
     - 6.4 [State Model](./state_model)（状态模型）
     - 6.5 [System Sequence Diagram](./system_seq_design)（功能模型）
     - 6.6 [Supplementary Requirements](./sup_require)（补充需求）
+    - 6.7 [software_requirements_specification](./software_requirements_specification)（软件需求规格说明书）
 * 7、Design（设计）
     - 7.1 [UI design](./demo.md)
     - 7.2 [Database design](./database_design)

@@ -21,7 +21,7 @@
 
 主题|软件需求规格说明书
 -|-
-版本|V2.0
+版本|V2.1
 内容|对软件需求以及规格化的说明
 关键字|需求文档、图书管理系统、改进版本
 参考资料|《UML和模式应用》Craig Larman著 李洋 郑龚 等译 https://blog.csdn.net/remoa_dengqinyi/article/details/52760507

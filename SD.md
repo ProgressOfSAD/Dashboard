@@ -60,10 +60,37 @@ CBV的全称是Class Base View，指的是用类实现的视图。体现了面�
 <br />
 ![](./asset/use_decorator.png)
 
+### 2.5. 设计模式——MVVM
+前端使用Vue框架开发，它实现了MVVM设计模式。
+<br />
+ViewModel将View和Model连接起来，View的变动将自动反映到Model上，同理Model的变动也会反映到View上。具体例子如下：
+<br />
+![](./asset/MVVM.png)
+<br />
+使用Vue的v-model命令进行双向绑定，当input内的内容变化或者form数据变化时，都能反映到另一边上。
+
+### 2.6. 组件化开发
+构建单页面应用，将单个页面分为一个个的组件，对每个组件进行单独开发，并最终合到一起形成最后的页面。例子如下：
+<br />
+![](./asset/zujianhua.png)
+<br />
+此处将页面分成v-head，v-sidebar，v-tags以及router-view四个组件进行开发。
+
 ## 3. 模块划分
 按功能划分模块，有用户系统、管理员系统、超级管理员系统（admin）。
 <br />
-前端：
+<br />
+前端分为用户系统和管理员系统。
+<br />
+用户系统：
+<br />
+管理员系统分为主页面以及主页面所使用到的各个组件。
+<br />
+common文件夹下为每个页面所共享的组件，page文件夹下为借阅，书籍管理，归还等多个功能的组件，通过router在router-view上进行切换。
+<br />
+其中common文件夹下的代码文件及main.js, App.vue为使用他人的代码（https://github.com/lin-xin/vue-manage-system）
+<br />
+![](./asset/adminmokuai.png)
 <br />
 
 后端分为两个提供REST API的用户APP和管理员APP：

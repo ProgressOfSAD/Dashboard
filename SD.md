@@ -83,35 +83,26 @@ ViewModel将View和Model连接起来，View的变动将自动反映到Model上�
 
 ## 3. 模块划分
 按功能划分模块，有用户系统、管理员系统、超级管理员系统（admin）。
-<br />
-<br />
-前端分为用户系统和管理员系统。
-<br />
 
-### 3.1 用户系统：
-
+### 3.1 前端用户系统：
 用vue-cli脚手架初始化项目，配置好相关的npm依赖（package.json)，项目的配置如e2e测试、eslint代码规范检测等都已经配置好。
-
+<br />
 ![](./asset/uesr1.PNG)
-
+<br />
 用Docker打包容器封装好环境进行开发因此有一个Dockerfile，里面有相关的环境配置。
-
+<br />
 代码实现主要在src文件夹中，静态文件存放在static中（如图片等，在该文件夹中相对路径不变），测试放在test中。
-
+<br />
 如下是src中的文件结构：
-
+<br />
 ![](asset/user2.PNG)
-
+<br />
 App.vue是固定页面，根据router渲染不同的components在`<router-view></router-view>`中。
-
+<br />
 components中是所有组件，store中引入Vuex进行状态管理，router中引入vue-router管理路由。
 
-<br />
-
-### 3.2 管理员系统
-
+### 3.2 前端管理员系统
 管理员系统分为主页面以及主页面所使用到的各个组件。
-
 <br />
 common文件夹下为每个页面所共享的组件，page文件夹下为借阅，书籍管理，归还等多个功能的组件，通过router在router-view上进行切换。
 <br />
@@ -120,10 +111,13 @@ common文件夹下为每个页面所共享的组件，page文件夹下为借阅�
 ![](./asset/adminmokuai.png)
 <br />
 
+### 3.3. 后端
 后端分为两个提供REST API的用户APP和管理员APP：
 <br />
 ![](./asset/backend_module.png)
 <br />
+
+### 3.4. admin
 超级管理员系统由Django框架提供，我们做一些配置就可以定制一些想要的功能：
 <br />
 ![](./asset/admin.png)

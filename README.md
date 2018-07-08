@@ -13,4 +13,8 @@
 
 ## Document
 
+- [部署说明](./deployment.md)
+- [Demo](./demo.md)
+- [软件需求规格说明书](./software_requirements_specification.md)
 - [软件设计文档](./SD.md)
+- [小组分工与贡献率说明](./contribution.md)

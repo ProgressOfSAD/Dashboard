@@ -18,4 +18,3 @@
 - [软件需求规格说明书](./software_requirements_specification.md)
 - [软件设计文档](./SD.md)
 - [小组分工与贡献率说明](./contribution.md)
-

@@ -5,7 +5,11 @@ $git clone https://github.com/ProgressOfSAD/Backend.git
 $cd Backend
 $./deploy.sh
 ```
-说明：需要docker环境
+说明：需要docker环境，同时，需要进入'./Backend/web_server/web_server/settings.py'文件中，找到  
+```
+DOMAIN = 'http://172.18.158.55:80'
+```
+将DOMAIN的IP改成执行当前代码的服务器的IP地址以及端口号
 
 ### Frontend
 1. 从GitHub上clone项目
